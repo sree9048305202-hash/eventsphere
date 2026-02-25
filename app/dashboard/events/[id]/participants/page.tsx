@@ -17,7 +17,7 @@ export default function EventParticipantsPage() {
 
   useEffect(() => {
     loadData();
-  }, [params.id]);
+  }, []);
 
   const loadData = async () => {
     try {

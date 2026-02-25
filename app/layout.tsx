@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "next-themes";
+import { backgroundImage } from "html2canvas-pro/dist/types/css/property-descriptors/background-image";
+import { backgroundRepeat } from "html2canvas-pro/dist/types/css/property-descriptors/background-repeat";
 
 export const metadata: Metadata = {
   title: "EventSphere - Tech Fests & Hackathons",
@@ -27,7 +29,7 @@ export default function RootLayout({
           enableSystem={true}
         >
           <Header />
-          {children}
+          <main className="min-h-screen" style={{ backgroundImage: "url('./bg1.jpeg')", backgroundRepeat: "no-repeat", backgroundSize: "100% auto" }}>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
